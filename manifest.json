@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "Medium Member Preview Blocker",
+  "description": "Medium Member Preview Blocker.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "content_scripts":[{
+    "matches": ["https://www.medium.com/*", "https://medium.com/*"],
+    "js": ["index.js"]
+  }]
+}
